@@ -1,0 +1,15 @@
+ {% load static %}
+{% include "boot.html" %}
+<link rel="stylesheet" href="{% static "css_style/style.css" %}">o
+<div class='container-fluid d-flex align-items-center justify-content-center'>
+    <div>
+    <h1>login page</h1> <br>
+<form method="POST">
+    <p style="color:red;">{{error}}</p>
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type='submit'>login</button>
+</form>
+<div><p>you have no account</p><a href="{% url 'register'%}">signup</a></div>
+</div>
+</div>

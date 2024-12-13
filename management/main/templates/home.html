@@ -1,0 +1,69 @@
+{% load static %}
+{% include "boot.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "style/style.css" %}">
+    
+    <title>Document</title>
+</head>
+<body>
+
+
+   
+<nav class='container-fluid d-flex justify-content-between  '>
+    <div>
+        <h5 class="font-weight-bold">TASKS</h5></div>
+     
+        
+    <div class="icon">
+        <div class='search_form' >
+            <form  method='GET' class="form-inline src">
+              <input class="form-control mr-sm-2" name='search_data' type="search" placeholder="Search" aria-label="Search"><br>
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+        
+        
+        <a href="{% url "create" %}"><div class='create_icon'>create</div></a>
+        <a href="{% url "logout" %}"><div class='icon log_text'>logout</div></a>
+        <option value=""></option>
+    </div>
+</nav>
+
+<div class='d-flex justify-content-center'> 
+     <table class='m-5 d-flex'>
+        <tr>
+            <th >Task</th>
+            <th>Assigned Date</th>
+            <th>Status</th>
+            <th>Priority</th>
+            <th>Assigned To</th>
+            <th>Action</th>
+
+        </tr>
+        {% for data in data %}
+        <tr>
+            <td>{{data.task}}</td>
+            <td>{{data.date}}</td>
+            <td>{{data.status}}</td>
+            <td>{{data.priority}}</td>
+            <td>{{data.assigned_To}}</td>
+            <td><a class" upd" href="{% url "update" data.id %}">update</a>
+            <a class="dlt" href="{% url "delete" data.id %}">delete</a></td>
+        </tr>
+        {% endfor %}
+        
+     </table>
+
+</div>
+
+    
+</body>
+</html>
+
+
+

@@ -1,0 +1,14 @@
+{% include "boot.html" %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static "css_style/style.css" %}">
+
+<div class='create_form'>
+    <div class='main_form'>
+<form method="POST">
+    {% csrf_token %}
+    <div class='text-white'>{{form.as_p}}</div>
+    <button type='submit'>create</button>
+</form>
+</div>
+</div>

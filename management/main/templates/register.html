@@ -1,0 +1,15 @@
+{% load static %}
+{% include "boot.html" %}  
+<link rel="stylesheet" href="{% static "css_style/style.css" %}">
+<div class='register_main'>
+    <div>
+    <h1>register page</h1><br>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        
+    <button type='submit'>create</button>
+    </form>
+    <p class="text-success ">already registered <a  href="{% url 'login'%}">login</a></p>
+</div>
+ 

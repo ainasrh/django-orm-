@@ -1,0 +1,76 @@
+table{
+    border: 1px solid rgb(218, 35, 35);
+}
+th,td{
+    padding: 6px;
+    border: 1px solid black;
+}
+.icon{
+    display: flex;
+}
+.create_icon{
+    border: 2px solid blue;
+    padding: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 5px; 
+    color: black;  
+    background-color:blue ;
+    margin: 5px;
+}
+.create_icon:hover{
+    background-color: rgb(59, 56, 230);
+    color: white; 
+    
+}
+.log_text{
+    border: 2px solid blue;
+    padding: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 5px; 
+    color: black;  
+    background-color:blue ;
+    margin: 5px;
+    margin-right:9px ;
+
+}
+.log_text:hover{
+    background-color: rgb(59, 56, 230);
+    color: white;  
+}
+
+.search_form{
+    margin-right: 20px;
+    
+}
+
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    margin: 40px;
+    
+}
+.create_form{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.main_form{
+    width: 80vh;
+    height: 50vh;
+    background-color: rgb(78, 72, 72);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.register_main{
+    background-color: black;
+}
+
